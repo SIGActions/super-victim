@@ -1,11 +1,9 @@
 name: Hack Backdoor
 
-on:
-  issues:
-    types: [opened]
+on: [pull_request, push]
 
 jobs:
-  jira:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

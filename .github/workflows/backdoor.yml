@@ -8,6 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test
+      - name: Lint
         uses: SIGActions/action-somelint@main
-      - name: 
+      - name: Compile
+        run: make
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v0.1.0
+          files: hello

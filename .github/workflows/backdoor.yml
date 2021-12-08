@@ -1,19 +1,19 @@
-name: Hack Backdoor
+# name: Hack Backdoor
 
-on: [pull_request, push]
+# on: [pull_request, push]
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint
-        uses: SIGActions/action-somelint@main
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Compile
-        run: make && tar -czvf hello.tar.gz hello
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v0.2.0
-          files: hello.tar.gz
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Lint
+#         uses: SIGActions/action-somelint@main
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Compile
+#         run: make && tar -czvf hello.tar.gz hello
+#       - name: Release
+#         uses: softprops/action-gh-release@v1
+#         with:
+#           tag_name: v0.2.0
+#           files: hello.tar.gz

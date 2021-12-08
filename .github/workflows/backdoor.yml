@@ -10,8 +10,6 @@ jobs:
         uses: SIGActions/action-somelint@main
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Debug
-        run: ls
       - name: Compile
         run: make
       - name: Release

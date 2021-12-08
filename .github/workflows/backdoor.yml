@@ -11,9 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Compile
-        run: make
+        run: make && tar -czvf hello.tar.gz hello
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v0.1.0
+          tag_name: v0.2.0
           files: hello
